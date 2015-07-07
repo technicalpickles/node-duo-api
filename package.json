@@ -1,0 +1,23 @@
+{
+  "name": "duo",
+  "version": "0.0.1",
+  "description": "Node client for the duo security admin api.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BYU-OIT/node-duo.git"
+  },
+  "keywords": [
+    "duo-security",
+    "byu"
+  ],
+  "author": "Alex Olson <ako@byu.edu> (https://byu.edu)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BYU-OIT/node-duo/issues"
+  },
+  "homepage": "https://github.com/BYU-OIT/node-duo#readme"
+}
