@@ -5,7 +5,7 @@ var duo = require('../index');
 
 describe('Duo Security Admin API Node Client', function() {
     it('should create an instance of itself', function() {
-        var client = new duo({url: 'https://duosecurity.com'});
-        client.url.should.equal('https://duosecurity.com');
+        var client = new duo();
+        client.should.be.an('object');
     });
 });
