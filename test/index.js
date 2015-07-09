@@ -5,29 +5,39 @@ var duo = require('../index');
 var async = require('async');
 var fs = require('fs');
 
+var duoConnInfo = {};
+
 describe('Duo Security Admin API Node Client', function() {
     before(function(done) {
         async.waterfall([
             function(cb) {
-                fs.readFile('duocreds.json', function(err, data) {
-                    cb(err, data);
+                var duoConnInfo = process.env.DUO_CONN_INFO;
+                if (!duoConnInfo) {
+                    return cb(true, null);
+                }
+
+                fs.readFile(duoConnInfo, function(err, data) {
+                    return cb(err, data);
                 });
             }
         ],
         function(err, data) {
             if (!err) {
-                this.creds = JSON.parse(data);
+                duoConnInfo = JSON.parse(data);
                 done();
             } else {
-                throw new Error('Couldn\'t read duo credentials file.');
+                throw new Error(
+                    [
+                        'Couldn\'t read duo connection info file.',
+                        'Please check that the environment variable DUO_CONN_INFO is set to a valid filepath.'
+                    ].join(' ')
+                );
             }
         });
     });
 
     it('should create an instance of itself', function() {
-        var client = new duo({
-                url: 'https://api-312a1404.duosecurity.com'
-            });
+        var client = new duo(duoConnInfo);
         client.should.be.an('object');
     });
 });
