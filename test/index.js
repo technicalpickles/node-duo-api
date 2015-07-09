@@ -36,8 +36,11 @@ describe('Duo Security Admin API Node Client', function() {
         });
     });
 
-    it('should create an instance of itself', function() {
-        var client = new duo(duoConnInfo);
-        client.should.be.an('object');
+    beforeEach(function() {
+        this.client = new duo(duoConnInfo);
+    });
+
+    it('should create and instance of itself', function() {
+        this.client.should.be.an('object');
     });
 });
