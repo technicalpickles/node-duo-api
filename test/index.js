@@ -43,4 +43,8 @@ describe('Duo Security Admin API Node Client', function() {
     it('should create and instance of itself', function() {
         this.client.should.be.an('object');
     });
+
+    it('should retrieve users', function() {
+        this.client.request('get', '/admin/v1/users', {one: 'a', two:'b', three:'c'});
+    });
 });
