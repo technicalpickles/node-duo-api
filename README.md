@@ -12,7 +12,7 @@ To run the tests on your local machine, create three environment variables:
 
 then run `gulp test`.
 
-```shell
+```bash
 cd node-duo/
 export DUO_API_HOST=https://api-XXXXXXXX.duosecurity.com
 export DUO_API_IKEY=XXXXXXXXXXXXXXXXXXXX
