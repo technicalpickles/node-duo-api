@@ -15,7 +15,7 @@ describe('Duo Security Admin API Node Client', function() {
             ikey: process.env.DUO_API_IKEY,
             skey: process.env.DUO_API_SKEY
         });*/
-        this.client = new duo({});
+        this.client = new duo();
     });
 
     it('should create and instance of itself', function() {
