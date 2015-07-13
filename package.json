@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "Node client for the duo security admin api.",
   "main": "index.js",
-  "scripts": {
-    "test": "gulp taco"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BYU-OIT/node-duo.git"
