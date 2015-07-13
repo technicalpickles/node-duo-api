@@ -2,7 +2,6 @@
 
 var should = require('chai').should();
 var duo = require('../index');
-var async = require('async');
 var fs = require('fs');
 
 var duoConnInfo = {};
