@@ -3,7 +3,7 @@ node_js: stable
 before_install:
 - openssl aes-256-cbc -K $encrypted_6b5f9838808a_key -iv $encrypted_6b5f9838808a_iv
   -in duo.json.enc -out duo.json -d
-before_script: npm install -g gulp
+- npm install -g gulp
 script: gulp test
 env:
   matrix:
