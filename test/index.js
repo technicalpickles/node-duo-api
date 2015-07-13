@@ -20,7 +20,7 @@ describe('Duo Security Admin API Node Client', function() {
         this.client.should.be.an('object');
     });
 
-    it('should retrieve users', function() {
-        this.client.request('get', '/admin/v1/users', {one: 'a', two:'b', three:'c'});
+    it('should retrieve users', function(done) {
+        var req = this.client.request('get', '/admin/v1/users');
     });
 });
