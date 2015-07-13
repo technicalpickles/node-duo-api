@@ -1,10 +1,5 @@
 language: node_js
 node_js: stable
 before_install:
-- openssl aes-256-cbc -K $encrypted_6b5f9838808a_key -iv $encrypted_6b5f9838808a_iv
-  -in duo.json.enc -out duo.json -d
 - npm install -g gulp
 script: gulp test
-env:
-  matrix:
-    secure: bl1aVr8VRM2QHscZcnjYYpoJB/Gkh7XbE+E6f9v+E58HHWUwzZP8431e0bEDSRILzKy8VusJL8EB6YQHaWSzmzmJEQ26/SKuNxxJXre2cRCmV2KaAZetr1qDkVZRT0Yd+Zxo2jitxF1VLru4M7zgC01s9WlfJbCEZ8E0J31ABiSjZCQh2XLn1TFN66McoZE5UA4OIR8sZWg7841d5KHzjOW6qMVNcAaSRjN8gSHFBhCcd1hTTfFCQOGfWS2DFRvWvBTj17nCIn984aZW3Q+voLL+q8aOig1k5sXGNJ+4s8zyGJj+ltPBm+yCLpPoTuH+KZR8njmY7KJPcjQsnjU47uNJvnyF3OXmfA8cVQzSxfNPcKeEn6YlPq/dWUssPLvDWDqZJzp0fEJH5s/f7wwd08Ubjta6kOiOW4e4SqTPDbJXbRYknkGGDInnEltqP7tNYl/D9Y3RyH0a0TlfH93IJXllDZARXlLZooIUecKbSYwSjIN+tofs97CLdisgHhXfTEupYE0SkgzujfapV3kGh0SwGQ/A2rHzg7/4EN3I1XVxPAY/Gi67DlLlS5DDrWaxaSylTFHWJou7h3llK2NPcBlaI2kxPhZ2RvM38lWsG2xkIFpcVTyL7hQoSdPfGOEOGbn8Z3EzK3I94gwUL21xxi25XHJxZUHBRPeMKs+JcwE=
