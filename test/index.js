@@ -8,36 +8,13 @@ var fs = require('fs');
 var duoConnInfo = {};
 
 describe('Duo Security Admin API Node Client', function() {
-    before(function(done) {
-        async.waterfall([
-            function(cb) {
-                var duoConnInfo = process.env.DUO_CONN_INFO;
-                if (!duoConnInfo) {
-                    return cb(true, null);
-                }
-
-                fs.readFile(duoConnInfo, function(err, data) {
-                    return cb(err, data);
-                });
-            }
-        ],
-        function(err, data) {
-            if (!err) {
-                duoConnInfo = JSON.parse(data);
-                done();
-            } else {
-                throw new Error(
-                    [
-                        'Couldn\'t read duo connection info file.',
-                        'Please check that the environment variable DUO_CONN_INFO is set to a valid filepath.'
-                    ].join(' ')
-                );
-            }
-        });
-    });
 
     beforeEach(function() {
-        this.client = new duo(duoConnInfo);
+        this.client = new duo({
+            host: process.env.DUO_API_HOST,
+            ikey: process.env.DUO_API_IKEY,
+            skey: process.env.DUO_API_SKEY
+        });
     });
 
     it('should create and instance of itself', function() {
