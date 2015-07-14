@@ -21,10 +21,11 @@ describe('Duo Security Admin API Node Client', function() {
         var req = this.client.request('get', '/admin/v1/users');
         req.then(function(users) {
             console.log(users);
-            done();
         })
-        .fail(function(error) {
+        .catch(function(error) {
             console.log(error);
+        })
+        .finally(function() {
             done();
         });
     });
