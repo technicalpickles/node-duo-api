@@ -2,9 +2,6 @@
 
 var should = require('chai').should();
 var duo = require('../index');
-var fs = require('fs');
-
-var duoConnInfo = {};
 
 describe('Duo Security Admin API Node Client', function() {
 
@@ -16,11 +13,19 @@ describe('Duo Security Admin API Node Client', function() {
         });
     });
 
-    it('should create and instance of itself', function() {
+    it('should create an instance of itself', function() {
         this.client.should.be.an('object');
     });
 
     it('should retrieve users', function(done) {
         var req = this.client.request('get', '/admin/v1/users');
+        req.then(function(users) {
+            console.log(users);
+            done();
+        })
+        .fail(function(error) {
+            console.log(error);
+            done();
+        });
     });
 });
