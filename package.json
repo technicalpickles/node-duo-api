@@ -24,7 +24,7 @@
     "gulp-mocha": "^2.1.2"
   },
   "dependencies": {
-    "q": "^1.4.1",
+    "bluebird": "^2.9.34",
     "request": "^2.58.0"
   }
 }
