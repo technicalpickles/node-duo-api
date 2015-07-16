@@ -18,6 +18,15 @@ describe('Duo Security Admin API Node Client', function() {
     });
 
     it('should retrieve users', function(done) {
-        this.client.request('get', '/admin/v1/users');
+        this.client.request('get', '/admin/v1/users')
+        .then(function(users) {
+            console.log('successfully got users!');
+        })
+        .catch(function(e) {
+            console.log(e);
+        })
+        .finally(function() {
+            done();
+        });
     });
 });
