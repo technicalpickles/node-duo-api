@@ -2,8 +2,6 @@
 This is a node client for the duo security admin api.
 
 # Testing
-[Travis CI](https://travis-ci.org/) runs the tests against every commit.
-
 To run the tests on your local machine, create three environment variables:
  
 - `DUO_API_HOST`: duo api host. 
