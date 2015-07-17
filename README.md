@@ -1,6 +1,5 @@
-# Duo Security API Client [![Build Status](https://travis-ci.org/BYU-OIT/node-duo-api.svg?branch=master)](https://travis-ci.org/BYU-OIT/node-duo)
-This is a node client for the duo security admin api.
-
+# Duo Security API Client
+[![Build Status](https://travis-ci.org/BYU-OIT/node-duo-api.svg?branch=master)](https://travis-ci.org/BYU-OIT/node-duo-api)
 # Testing
 To run the tests on your local machine, create three environment variables:
  
