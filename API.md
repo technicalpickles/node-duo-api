@@ -22,7 +22,7 @@ var client = new Client({
 });
 ```
 
-##### `.request(method, path, params, Function cb<error, res>)` -> `Promise`
+##### `.request(method, path, params, Function cb<error, response>)` -> `Promise`
 Execute an http request to a duo api. On successful request, data is returned as parsed JSON object.
 - `method` (required): HTTP method to use.
 - `path` (required): The API path.
