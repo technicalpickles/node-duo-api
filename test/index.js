@@ -22,15 +22,14 @@ describe('Duosecurity Node Client', function() {
         describe('the request method', function() {
 
             it('should retrieve basic account information', function () {
-                return this.client.request('get', '/admin/v1/info/summary').then(function (info) {
-                    info.stat.should.equal('OK');
+                return this.client.request('get', '/admin/v1/info/summary').then(function (res) {
+                    res.stat.should.equal('OK');
                 });
             });
 
             it('should retrieve information about a user', function() {
-                return this.client.request('get', '/admin/v1/users', {username: 'akohbdc'}).then(function(user) {
-                    console.log(user);
-                    user.stat.should.equal('OK');
+                return this.client.request('get', '/admin/v1/users', {username: process.env.DUO_API_USER}).then(function(res) {
+                    res.stat.should.equal('OK');
                 })
             });
 
