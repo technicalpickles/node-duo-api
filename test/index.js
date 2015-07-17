@@ -32,7 +32,7 @@ describe('Duosecurity Node Client', function() {
                     res.stat.should.equal('OK');
                     if (process.env.DUO_API_USER) {
                         res.response.length.should.equal(1);
-                        res.response.shift.username.should.equal(process.env.DUO_API_USER);
+                        res.response.shift().username.should.equal(process.env.DUO_API_USER);
                     } else {
                         res.response.should.be.empty;
                     }
