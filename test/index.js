@@ -17,16 +17,13 @@ describe('Duo Security Admin API Node Client', function() {
         this.client.should.be.an('object');
     });
 
-    it('should retrieve users', function(done) {
-        this.client.request('get', '/admin/v1/users')
-        .then(function(users) {
-            console.log('successfully got users!');
-        })
-        .catch(function(e) {
-            console.log(e);
-        })
-        .finally(function() {
-            done();
+    describe('Base request method', function() {
+
+        it('should complete basic account info request', function () {
+            return this.client.request('get', '/admin/v1/info/summary').then(function (info) {
+                info.stat.should.equal('OK');
+            });
         });
+
     });
 });
