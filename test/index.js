@@ -17,7 +17,7 @@ describe('Duosecurity Node Client', function() {
         this.client.should.be.an('object');
     });
 
-    describe('and then using promises', function() {
+    describe('using promises', function() {
 
         describe('the request method', function() {
 
