@@ -2,9 +2,13 @@
 [![Build Status](https://travis-ci.org/BYU-OIT/node-duo-api.svg?branch=master)](https://travis-ci.org/BYU-OIT/node-duo-api)
 
 - [API Reference and examples](API.md)
-- [Testing](#testing)
+- [Development](#development)
+  - [Testing](#testing)
 
-# Testing
+---
+
+# Development
+## Testing
 To run the tests on your local machine, create three environment variables:
  
 - `DUO_API_HOST`: duo api host. 
