@@ -11,13 +11,15 @@
 ## Testing
 To run the tests on your local machine, create three environment variables:
  
-- `DUO_API_HOST`: duo api host. 
-- `DUO_API_IKEY`: duo api integration key.
-- `DUO_API_SKEY`: duo api secret key.
+- `DUO_API_HOST`: Duo api host. 
+- `DUO_API_IKEY`: Duo api integration key.
+- `DUO_API_SKEY`: Duo api secret key.
 
-Optionally, you can also set an additional environment variable, `DUO_API_USER` to a valid duo username in your account to enable more rigorous user lookup testing.
+Optionally, you can also set the following additional environment variables:
 
-Then, after setting the environment variables, run `gulp test`.
+- `DUO_API_USER`: Valid duo username in your account. Setting this enables more rigorous testing of user lookup functionality.
+
+After setting the environment variables, run `gulp test`.
 
 ```bash
 cd node-duo/
