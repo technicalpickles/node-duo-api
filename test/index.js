@@ -3,7 +3,7 @@
 var should = require('chai').should();
 var duo = require('../index');
 
-describe('Duo Security Admin API Node Client', function() {
+describe('Duosecurity Node Client', function() {
 
     beforeEach(function() {
         this.client = new duo({
@@ -28,7 +28,8 @@ describe('Duo Security Admin API Node Client', function() {
             });
 
             it('should retrieve information about a user', function() {
-                return this.client.request('get', '/admin/v1/users', {username: 'alexkolson'}).then(function(user) {
+                return this.client.request('get', '/admin/v1/users', {username: 'akohbdc'}).then(function(user) {
+                    console.log(user);
                     user.stat.should.equal('OK');
                 })
             });
