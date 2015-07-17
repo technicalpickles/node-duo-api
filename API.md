@@ -1,7 +1,7 @@
 # API Reference
 
 - [`new Client(config)`](#new-clientconfig--client)
-- [`.request(method, path, params, cb)`](#requestmethod-path-params-cb--promise)
+- [`.request(method, path, params, cb)`](#requestmethod-path-params-cb---promise)
 
 ---
 
