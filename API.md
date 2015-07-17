@@ -1,11 +1,11 @@
 # API Reference
 
-- [`new Client(config)`](#new-clientconfig)
+- [`new Client(config)`](#new-clientconfig-client)
 - [`.request(method, path, cb)`](#requestmethod-path-cb)
 
 ---
 
-##### `new Client(config)`
+##### `new Client(config)` -> `Client`
 Creates a new duo api client. Takes a `config` object as its sole argument. The config object must contain 3 elements:
 *Note: These values can be found by logging into your admin panel at [admin.duosecurity.com](https://admin.duosecurity.com)*
 - `host`: Duo API host: `api-XXXXXXXX.duosecurity.com`
