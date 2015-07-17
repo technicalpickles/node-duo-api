@@ -34,6 +34,7 @@ describe('Duosecurity Node Client', function() {
                         res.response.length.should.equal(1);
                         res.response.shift().username.should.equal(process.env.DUO_API_USER);
                     } else {
+                        console.log('got to the right test');
                         res.response.should.be.empty;
                     }
                 })
