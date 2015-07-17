@@ -34,7 +34,7 @@ See [Response Format](https://www.duosecurity.com/docs/adminapi#api-details) for
 
 Examples:
 
-- Request basic duo account information via the admin api:
+Request basic duo account information via the admin api:
 ```js
 // Using promise interface.
 client.request('get', '/admin/v1/info/summary').then(function(res) {}).catch(function(error) {});
@@ -42,7 +42,7 @@ client.request('get', '/admin/v1/info/summary').then(function(res) {}).catch(fun
 client.request('get', '/admin/v1/info/summary', null, function(error, res) {});
 ```
 
-- Request information about a user:
+Request information about a user:
 ```js
 // Using promise interface.
 client.request('get', '/admin/v1/users', {username: 'littlebobbytables'}).then(function(res) {}).catch(function(error) {});
