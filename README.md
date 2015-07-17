@@ -1,4 +1,4 @@
-# Node Duosecurity API Client [![Build Status](https://travis-ci.org/BYU-OIT/node-duo-api.svg?branch=master)](https://travis-ci.org/BYU-OIT/node-duo-api)
+# Duosecurity Node Client [![Build Status](https://travis-ci.org/BYU-OIT/node-duo-api.svg?branch=master)](https://travis-ci.org/BYU-OIT/node-duo-api)
 
 - [API Reference and examples](API.md)
 - [Development](#development)
