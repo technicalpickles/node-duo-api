@@ -12,7 +12,7 @@
     "duo-api",
     "byu"
   ],
-  "author": "Alex Olson <ako@byu.edu> (https://byu.edu)",
+  "author": "Alex Olson <ako@byu.edu> (https://github.com/alexkolson)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/BYU-OIT/node-duo-api/issues"
