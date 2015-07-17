@@ -3,9 +3,7 @@
 - [`new Client(config)`](#new-clientconfig)
 - [`.request(method, path, cb)`](#requestmethod-path-cb)
 
----
-
-##### `new CLient(config)`
+#### `new Client(config)`
 Creates a new duo api client. Takes a `config` object as its sole argument. The config object must contain 3 elements:
 - `host`: Duo API host: `api-XXXXXXXX.duosecurity.com`
 - `ikey`: Duo API Integration key: `XXXXXXXXXXXXXXXXXXXX`
