@@ -17,13 +17,24 @@ describe('Duo Security Admin API Node Client', function() {
         this.client.should.be.an('object');
     });
 
-    describe('Base request method', function() {
+    describe('and then using promises', function() {
 
-        it('should complete basic account info request', function () {
-            return this.client.request('get', '/admin/v1/info/summary').then(function (info) {
-                info.stat.should.equal('OK');
+        describe('the request method', function() {
+
+            it('should retrieve basic account information', function () {
+                return this.client.request('get', '/admin/v1/info/summary').then(function (info) {
+                    info.stat.should.equal('OK');
+                });
             });
+
+            it('should retrieve information about a user', function() {
+                return this.client.request('get', '/admin/v1/users', {username: 'alexkolson'}).then(function(user) {
+                    user.stat.should.equal('OK');
+                })
+            });
+
         });
 
     });
+
 });
