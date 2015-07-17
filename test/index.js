@@ -31,11 +31,10 @@ describe('Duosecurity Node Client', function() {
                 return this.client.request('get', '/admin/v1/users', {username: process.env.DUO_API_USER}).then(function(res) {
                     res.stat.should.equal('OK');
                     if (process.env.DUO_API_USER) {
-                        console.log(res);
                         res.response.length.should.equal(1);
-                        res.response.username.should.equal(process.env.DUO_API_USER);
+                        res.response.shift.username.should.equal(process.env.DUO_API_USER);
                     } else {
-                        res.response.length.should.be.empty;
+                        res.response.should.be.empty;
                     }
                 })
             });
