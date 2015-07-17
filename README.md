@@ -1,6 +1,9 @@
 # Duo Security API Client
 [![Build Status](https://travis-ci.org/BYU-OIT/node-duo-api.svg?branch=master)](https://travis-ci.org/BYU-OIT/node-duo-api)
-# Testing
+
+## Usage
+
+## Testing
 To run the tests on your local machine, create three environment variables:
  
 - `DUO_API_HOST`: duo api host. 
