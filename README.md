@@ -9,12 +9,13 @@
 # Development
 
 ## Testing
-To run the tests on your local machine, create four environment variables:
+To run the tests on your local machine, create three environment variables:
  
 - `DUO_API_HOST`: duo api host. 
 - `DUO_API_IKEY`: duo api integration key.
 - `DUO_API_SKEY`: duo api secret key.
-- `DUO_API_USER`: duo username for user lookup tests.
+
+Optionally, you can also set `DUO_API_USER` to a valid duo username in your account to enable more rigorous user lookup testing.
 
 then run `gulp test`.
 
@@ -23,7 +24,7 @@ cd node-duo/
 export DUO_API_HOST=api-XXXXXXXX.duosecurity.com
 export DUO_API_IKEY=XXXXXXXXXXXXXXXXXXXX
 export DUO_API_SKEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-export DUO_API_USER=XXXXX
+export DUO_API_USER=XXXXX # If you want enable rigorous user lookup testing.
 gulp test
 ```
 
