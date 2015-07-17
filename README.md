@@ -1,4 +1,4 @@
-# node-duo [![Build Status](https://travis-ci.org/BYU-OIT/node-duo.svg?branch=master)](https://travis-ci.org/BYU-OIT/node-duo)
+# Duo Security API Client [![Build Status](https://travis-ci.org/BYU-OIT/node-duo-api.svg?branch=master)](https://travis-ci.org/BYU-OIT/node-duo)
 This is a node client for the duo security admin api.
 
 # Testing
