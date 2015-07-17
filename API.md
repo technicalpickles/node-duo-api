@@ -29,7 +29,7 @@ Execute an http request to a duo api.
 - `params` (optional): Parameters to send with request.
 - `cb` (optional): If supplied, callback that will be called on completion of request.
 
-See [Response Format](https://www.duosecurity.com/docs/adminapi#api-details) for the structure of the response.
+See [Response Format](https://www.duosecurity.com/docs/adminapi#api-details) for information on the structure of the response.
 
 
 Examples:
