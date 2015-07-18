@@ -1,7 +1,7 @@
 # API Reference
 
 - [`new Client(config)`](#new-clientconfig---client)
-- [`.request(method, path, params, cb)`](#requestmethod-path-params-cb---promise)
+- [`.request(method, path, params, Function cb<error, response>)`](#requestmethod-path-params-function-cberror-response---promise)
 
 ---
 
@@ -22,27 +22,30 @@ var client = new Client({
 });
 ```
 
-##### `.request(method, path, params, cb)` -> `Promise`
-Execute an http request to a duo api. On successful request, data is returned as parsed JSON object.
+##### `.request(method, path, params, Function cb<error, response>)` -> `Promise`
+Execute an http request to a duo api.
 - `method` (required): HTTP method to use.
 - `path` (required): The API path.
 - `params` (optional): Parameters to send with request.
 - `cb` (optional): If supplied, callback that will be called on completion of request.
+
+See [Response Format](https://www.duosecurity.com/docs/adminapi#api-details) for information on the structure of the response.
+
 
 Examples:
 
 Request basic duo account information via the admin api:
 ```js
 // Using promise interface.
-client.request('get', '/admin/v1/info/summary').then(function(info) {}).catch(function(error) {});
+client.request('get', '/admin/v1/info/summary').then(function(res) {}).catch(function(error) {});
 // Using callback.
-client.request('get', '/admin/v1/info/summary', null, function(error, info) {});
+client.request('get', '/admin/v1/info/summary', null, function(error, res) {});
 ```
 
 Request information about a user:
 ```js
 // Using promise interface.
-client.request('get', '/admin/v1/users', {username: 'littlebobbytables'}).then(function(user) {}).catch(function(error) {});
+client.request('get', '/admin/v1/users', {username: 'littlebobbytables'}).then(function(res) {}).catch(function(error) {});
 // Using callback.
-client.request('get', '/admin/v1/users', {username: 'littlebobbytables'}, function(error, user) {});
+client.request('get', '/admin/v1/users', {username: 'littlebobbytables'}, function(error, res) {});
 ```

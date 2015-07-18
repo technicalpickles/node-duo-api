@@ -3,7 +3,7 @@
 var should = require('chai').should();
 var duo = require('../index');
 
-describe('Duo Security Admin API Node Client', function() {
+describe('Duosecurity Node Client', function() {
 
     beforeEach(function() {
         this.client = new duo({
@@ -17,13 +17,58 @@ describe('Duo Security Admin API Node Client', function() {
         this.client.should.be.an('object');
     });
 
-    describe('Base request method', function() {
+    describe('using promise api', function() {
 
-        it('should complete basic account info request', function () {
-            return this.client.request('get', '/admin/v1/info/summary').then(function (info) {
-                info.stat.should.equal('OK');
+        describe('the request method', function() {
+
+            it('should retrieve basic account information', function () {
+                return this.client.request('get', '/admin/v1/info/summary').then(function (res) {
+                    res.stat.should.equal('OK');
+                });
             });
+
+            it('should retrieve information about a user', function() {
+                return this.client.request('get', '/admin/v1/users', {username: process.env.DUO_API_USER}).then(function(res) {
+                    res.stat.should.equal('OK');
+                    if (process.env.DUO_API_USER) {
+                        res.response.length.should.equal(1);
+                        res.response.shift().username.should.equal(process.env.DUO_API_USER);
+                    } else {
+                        res.response.should.be.empty;
+                    }
+                });
+            });
+
         });
 
     });
+
+    describe('using callback api', function() {
+
+        describe('the request method', function() {
+
+            it('should retrieve bassic account information', function(done) {
+                this.client.request('get', '/admin/v1/info/summary', null, function(error, res) {
+                    res.stat.should.equal('OK');
+                    done();
+                });
+            });
+
+            it('should retrieve information about a user', function(done) {
+                this.client.request('get', '/admin/v1/users', {username: process.env.DUO_API_USER}, function(error, res) {
+                    res.stat.should.equal('OK');
+                    if (process.env.DUO_API_USER) {
+                        res.response.length.should.equal(1);
+                        res.response.shift().username.should.equal(process.env.DUO_API_USER);
+                    } else {
+                        res.response.should.be.empty;
+                    }
+                    done();
+                });
+            });
+
+        });
+
+    });
+
 });
