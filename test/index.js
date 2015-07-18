@@ -16,11 +16,7 @@ describe('Duosecurity Node Client', function() {
     it('should create an instance of itself', function() {
         this.client.should.be.an('object');
     });
-
-    it('should fail', function() {
-        should.fail();
-    });
-
+    
     describe('using promise api', function() {
 
         describe('the request method', function() {
