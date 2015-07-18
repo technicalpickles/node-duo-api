@@ -63,6 +63,7 @@ describe('Duosecurity Node Client', function() {
                     } else {
                         res.response.should.be.empty;
                     }
+                    done();
                 });
             });
 
