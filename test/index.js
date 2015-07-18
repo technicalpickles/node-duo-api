@@ -36,7 +36,34 @@ describe('Duosecurity Node Client', function() {
                     } else {
                         res.response.should.be.empty;
                     }
-                })
+                });
+            });
+
+        });
+
+    });
+
+    describe('using callback', function() {
+
+        describe('the request method', function() {
+
+            it('should retrieve bassic account information', function(done) {
+                this.client.request('get', '/admin/v1/info/summary', null, function(error, res) {
+                    res.stat.should.equal('OK');
+                    done();
+                });
+            });
+
+            it('should retrieve information about a user', function(done) {
+                this.client.request('get', '/admin/v1/users', {username: process.env.DUO_API_USER}, function(error, res) {
+                    res.stat.should.equal('OK');
+                    if (process.env.DUO_API_USER) {
+                        res.response.length.should.equal(1);
+                        res.response.shift().username.should.equal(process.env.DUO_API_USER);
+                    } else {
+                        res.response.should.be.empty;
+                    }
+                });
             });
 
         });
