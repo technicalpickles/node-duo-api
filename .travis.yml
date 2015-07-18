@@ -12,3 +12,9 @@ env:
 notifications:
   slack:
     secure: M2HXtQLb54nPZYd+e72pwn37QM11epM8pR2VuBbK3cT2rkqWYbfmL4k6bk505Z/9wjqzNGxXK7XSfzJf8jEvNQiEkzesu1NWx2OF3e/bhy7lQE0QKoptFYoh+UJpXYggiEqDqHdx1H8hG/jyKikEhryJ6JtwdCJuL3xIeNUYoBu8jr82x+uJzQiSnPhCXDfhQwxiMp88MngFd0PCQyGOOM7ss/hxDLnL4imnLT4lbj4Iuxa31ctXkJQKDqc5KZjk2fQm+3p4OUe50b/7BnN7Jw+qlFLdCvA/c6GFhengyVV0H7JiIxsMIRMl1+VXfICVPRWkWvs5qGziw8n6dpg/CUIh/bMMVdBks2u8q0D8z7IIEqh6mrYQJgFrIKV6X95zij3pj7rSgxrskGKgNMrSNl16nehxDwTNBJkGI9UqYZDRrf0WLnsQs3xNMqbI+MsmORZtVm2IExwFdOT2OmOxPUuN7gor4Xv1a2HCDqOITEZCFT+YmPNVZVeu0Ep/HDqhcQ/kU11grNjPYThCENismaLHDS318rD96qMwlTusVCZ+cNnxJUHNOVzfWy4Q54gepcLKEjF1zQBtFurLsl2Jiaz/5utZ5BOWsEpzoNXa36vJDDuuuWJ37ikuL3pS8qnC5tVFmqkDhHJovNMx8CuL1GUd7bX0jnxFBFXm7UmRUjs=
+deploy:
+  provider: npm
+  email: "ako@byu.edu"
+  api_key: "584c0d8e-2d14-489a-92be-78ead023325a"
+  on:
+    tags: true
