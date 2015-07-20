@@ -39,6 +39,8 @@ describe('Duosecurity Node Client', function() {
                 });
             });
 
+            it('should create a new user')
+
         });
 
     });
@@ -47,7 +49,7 @@ describe('Duosecurity Node Client', function() {
 
         describe('the request method', function() {
 
-            it('should retrieve bassic account information', function(done) {
+            it('should retrieve basic account information', function(done) {
                 this.client.request('get', '/admin/v1/info/summary', null, function(error, res) {
                     res.stat.should.equal('OK');
                     done();
