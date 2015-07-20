@@ -39,7 +39,11 @@ describe('Duosecurity Node Client', function() {
                 });
             });
 
-            it('should create a new user')
+            it('should create a new user');
+
+            it('should enroll the new user');
+
+            it('should delete the enrolled user');
 
         });
 
@@ -69,6 +73,12 @@ describe('Duosecurity Node Client', function() {
                 });
             });
 
+            it('should create a new user');
+
+            it('should enroll the new user');
+
+            it('should delete the enrolled user');
+            
         });
 
     });
