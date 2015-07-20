@@ -1,6 +1,6 @@
 {
   "name": "duo-api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Duosecurity API Client",
   "main": "index.js",
   "repository": {
