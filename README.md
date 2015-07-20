@@ -18,6 +18,7 @@ npm install duo-api
 ```
 
 Then:
+
 ```js
 var Client = require('duo-api');
 ```
