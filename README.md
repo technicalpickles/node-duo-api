@@ -34,7 +34,8 @@ We love contributions and will gladly accept yours! Here's how you can contribut
 
 1. Fork the repo.
 2. Make your changes.
-3. Add tests if needed and then submit a pull request.
+3. Add tests as needed.
+4. Submit a pull request.
 
 ## Testing
 
@@ -51,7 +52,7 @@ Optionally, you can also set the following additional environment variables:
 After setting the environment variables, run `gulp test`.
 
 ```bash
-git clone git@github.com:BYU-OIT/node-duo-api.git # Can also clone your own fork.
+git clone git@github.com:BYU-OIT/node-duo-api.git # Or your own fork.
 cd node-duo-api/
 export DUO_API_HOST=api-XXXXXXXX.duosecurity.com
 export DUO_API_IKEY=XXXXXXXXXXXXXXXXXXXX
