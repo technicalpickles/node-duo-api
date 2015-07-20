@@ -1,6 +1,6 @@
 # Duosecurity Node Client [![Build Status](https://travis-ci.org/BYU-OIT/node-duo-api.svg?branch=master)](https://travis-ci.org/BYU-OIT/node-duo-api)
 
-[![NPM](https://nodei.co/npm/duo-api.png?compact=true)](https://nodei.co/npm/duo-api/)
+[![NPM](https://nodei.co/npm/duo-api.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/duo-api/)
 
 - [Quick Start](#quick-start)
 - [API Reference and examples](API.md)

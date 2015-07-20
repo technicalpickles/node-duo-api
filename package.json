@@ -1,7 +1,7 @@
 {
   "name": "duo-api",
   "version": "1.0.0",
-  "description": "Duosecurity API Client.",
+  "description": "Duosecurity API Client",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -9,8 +9,10 @@
   },
   "keywords": [
     "duo-security",
-    "duo-api",
-    "byu"
+    "duo-admin-api",
+    "duo-auth-api",
+    "duo-verify-api",
+    "duo-accounts-api"
   ],
   "author": "Alex Olson <ako@byu.edu> (https://github.com/alexkolson)",
   "license": "MIT",
