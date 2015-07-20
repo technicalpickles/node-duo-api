@@ -57,6 +57,8 @@ After setting the environment variables, run `gulp test`.
 ```bash
 git clone git@github.com:BYU-OIT/node-duo-api.git # Or your own fork.
 cd node-duo-api/
+npm install -g gulp # If you don't have gulp installed already.
+npm install # Install dependencies.
 export DUO_API_HOST=api-XXXXXXXX.duosecurity.com
 export DUO_API_IKEY=XXXXXXXXXXXXXXXXXXXX
 export DUO_API_SKEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
