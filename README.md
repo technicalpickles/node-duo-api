@@ -23,7 +23,7 @@ Then:
 ```js
 var Client = require('duo-api');
 ```
-Then: [Instantiate a `Client`](API.md/#new-clientconfig---client).
+Then: [Create a `Client`](API.md/#new-clientconfig---client).
 
 Finally: [Make a request](API.md/#requestmethod-path-params-function-cberror-response---promise).
 
