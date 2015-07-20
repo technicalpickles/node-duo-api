@@ -23,12 +23,9 @@ Then:
 ```js
 var Client = require('duo-api');
 ```
-Then:
-
-[Instantiate a `Client` instance](API.md/#new-clientconfig---client).
+Then: [Instantiate a `Client` instance](API.md/#new-clientconfig---client).
 
 Finally:
-
 [Make a request](API.md/#requestmethod-path-params-function-cberror-response---promise).
 
 # Reporting Bugs/Issues
