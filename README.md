@@ -24,6 +24,7 @@ var Client = require('duo-api');
 ```
 
 # Development
+
 ## Testing
 
 To run the tests on your local machine, create three environment variables:
