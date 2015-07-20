@@ -1,16 +1,44 @@
 # Duosecurity Node Client [![Build Status](https://travis-ci.org/BYU-OIT/node-duo-api.svg?branch=master)](https://travis-ci.org/BYU-OIT/node-duo-api)
 
-[![NPM](https://nodei.co/npm/duo-api.png?compact=true)](https://nodei.co/npm/duo-api/)
+[![NPM](https://nodei.co/npm/duo-api.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/duo-api/)
 
+- [Quick Start](#quick-start)
 - [API Reference and examples](API.md)
+- [Reporting Bugs/Issues](#reporting-bugsissues)
 - [Development](#development)
   - [Testing](#testing)
 
 ---
 
+# Quick Start
+
+First:
+
+```bash
+npm install duo-api
+```
+
+Then:
+
+```js
+var Client = require('duo-api');
+```
+
+# Reporting Bugs/Issues
+
+Something not working? Found a bug? Got a question? Feature request? [Open an issue](https://github.com/BYU-OIT/node-duo-api/issues/new) and we'll get on it!
+
 # Development
 
+We love contributions and will gladly accept yours! Here's how you can contribute:
+
+1. Fork the repo.
+2. Make your changes.
+3. Add tests as needed.
+4. Submit a pull request.
+
 ## Testing
+
 To run the tests on your local machine, create three environment variables:
  
 - `DUO_API_HOST`: Duo api host. 
@@ -24,7 +52,8 @@ Optionally, you can also set the following additional environment variables:
 After setting the environment variables, run `gulp test`.
 
 ```bash
-cd node-duo/
+git clone git@github.com:BYU-OIT/node-duo-api.git # Or your own fork.
+cd node-duo-api/
 export DUO_API_HOST=api-XXXXXXXX.duosecurity.com
 export DUO_API_IKEY=XXXXXXXXXXXXXXXXXXXX
 export DUO_API_SKEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
