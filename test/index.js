@@ -78,7 +78,7 @@ describe('Duosecurity Node Client', function() {
             it('should enroll the new user');
 
             it('should delete the enrolled user');
-            
+
         });
 
     });
