@@ -4,7 +4,7 @@
 
 - [Quick Start](#quick-start)
 - [API Reference and examples](API.md)
-- [Reporting Bugs/Issues](#reporting-bugsissues)
+- [Reporting Bugs/Issues](#reporting-issues)
 - [Development](#development)
   - [Testing](#testing)
 
@@ -27,7 +27,7 @@ Then: [Create a `Client`](API.md/#new-clientconfig---client).
 
 Finally: [Make a request](API.md/#requestmethod-path-params-function-cberror-response---promise).
 
-# Reporting Bugs/Issues
+# Reporting Issues
 
 Something not working? Found a bug? Got a question? Feature request? [Open an issue](https://github.com/BYU-OIT/node-duo-api/issues/new) and we'll get on it!
 
