@@ -4,7 +4,7 @@
 
 - [Quick Start](#quick-start)
 - [API Reference and examples](API.md)
-- [Reporting Bugs/Issues](#reporting-issues)
+- [Reporting Issues](#reporting-issues)
 - [Development](#development)
   - [Testing](#testing)
 
