@@ -3,14 +3,26 @@
 [![NPM](https://nodei.co/npm/duo-api.png?compact=true)](https://nodei.co/npm/duo-api/)
 
 - [API Reference and examples](API.md)
+- [Quick Start](#quick-start)
 - [Development](#development)
   - [Testing](#testing)
 
 ---
 
+# Quick Start
+
+```bash
+npm install duo-api
+```
+
+```js
+var Client = require('duo-api');
+```
+
 # Development
 
 ## Testing
+
 To run the tests on your local machine, create three environment variables:
  
 - `DUO_API_HOST`: Duo api host. 
