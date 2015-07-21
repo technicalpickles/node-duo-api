@@ -3,6 +3,8 @@
 var should = require('chai').should();
 var duo = require('../index');
 
+var TEST_USER_ID = '';
+
 describe('Duosecurity Node Client', function() {
 
     beforeEach(function() {
@@ -39,11 +41,25 @@ describe('Duosecurity Node Client', function() {
                 });
             });
 
-            it('should create a new user');
+            it('should create a new user', function() {
+                return this.client.request('post', '/admin/v1/users', {username: 'node-duo-api-test-user'}).then(function(res) {
+                    res.stat.should.equal('OK');
+                    TEST_USER_ID = res.response.user_id;
+                })
+            });
 
             it('should enroll the new user');
 
-            it('should delete the enrolled user');
+            it('should delete the enrolled user', function() {
+                var path = [
+                    '/admin/v1/users',
+                    TEST_USER_ID
+                ].join('/');
+
+                return this.client.request('delete', path).then(function(res) {
+                    res.stat.should.equal('OK');
+                });
+            });
 
         });
 
