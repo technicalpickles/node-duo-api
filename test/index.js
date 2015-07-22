@@ -71,6 +71,14 @@ describe('Duosecurity Node Client', function() {
                 });
             });
 
+            it('should create a new user', function(done) {
+                this.client.request('post', '/admin/v1/users', {username: TEST_USER}, function(error, res) {
+                    res.stat.should.equal('OK');
+                    TEST_USER_ID = res.response.user_id;
+                    done();
+                });
+            });
+
             it('should retrieve information about a user', function(done) {
                 this.client.request('get', '/admin/v1/users', {username: TEST_USER}, function(error, res) {
                     res.stat.should.equal('OK');
@@ -80,8 +88,17 @@ describe('Duosecurity Node Client', function() {
                 });
             });
 
-            it('should create a new user');
-            it('should delete the new user');
+            it('should delete the new user', function(done) {
+                var path = [
+                    '/admin/v1/users',
+                    TEST_USER_ID
+                ].join('/');
+
+                this.client.request('delete', path, null, function(error, res) {
+                    res.stat.should.equal('OK');
+                    done();
+                });
+            });
 
         });
 
