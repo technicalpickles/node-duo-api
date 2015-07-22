@@ -3,6 +3,9 @@
 var should = require('chai').should();
 var duo = require('../index');
 
+var TEST_USER = 'nodeclient->testuser';
+var TEST_USER_ID = '';
+
 describe('Duosecurity Node Client', function() {
 
     beforeEach(function() {
@@ -27,15 +30,29 @@ describe('Duosecurity Node Client', function() {
                 });
             });
 
-            it('should retrieve information about a user', function() {
-                return this.client.request('get', '/admin/v1/users', {username: process.env.DUO_API_USER}).then(function(res) {
+            it('should create a new user', function() {
+                return this.client.request('post', '/admin/v1/users', {username: TEST_USER}).then(function(res) {
                     res.stat.should.equal('OK');
-                    if (process.env.DUO_API_USER) {
-                        res.response.length.should.equal(1);
-                        res.response.shift().username.should.equal(process.env.DUO_API_USER);
-                    } else {
-                        res.response.should.be.empty;
-                    }
+                    TEST_USER_ID = res.response.user_id;
+                })
+            });
+
+            it('should retrieve information about the new user', function() {
+                return this.client.request('get', '/admin/v1/users', {username: TEST_USER}).then(function(res) {
+                    res.stat.should.equal('OK');
+                    res.response.length.should.equal(1);
+                    res.response.shift().username.should.equal(TEST_USER);
+                });
+            });
+
+            it('should delete the new user', function() {
+                var path = [
+                    '/admin/v1/users',
+                    TEST_USER_ID
+                ].join('/');
+
+                return this.client.request('delete', path).then(function(res) {
+                    res.stat.should.equal('OK');
                 });
             });
 
@@ -47,22 +64,38 @@ describe('Duosecurity Node Client', function() {
 
         describe('the request method', function() {
 
-            it('should retrieve bassic account information', function(done) {
+            it('should retrieve basic account information', function(done) {
                 this.client.request('get', '/admin/v1/info/summary', null, function(error, res) {
                     res.stat.should.equal('OK');
                     done();
                 });
             });
 
-            it('should retrieve information about a user', function(done) {
-                this.client.request('get', '/admin/v1/users', {username: process.env.DUO_API_USER}, function(error, res) {
+            it('should create a new user', function(done) {
+                this.client.request('post', '/admin/v1/users', {username: TEST_USER}, function(error, res) {
                     res.stat.should.equal('OK');
-                    if (process.env.DUO_API_USER) {
-                        res.response.length.should.equal(1);
-                        res.response.shift().username.should.equal(process.env.DUO_API_USER);
-                    } else {
-                        res.response.should.be.empty;
-                    }
+                    TEST_USER_ID = res.response.user_id;
+                    done();
+                });
+            });
+
+            it('should retrieve information about a user', function(done) {
+                this.client.request('get', '/admin/v1/users', {username: TEST_USER}, function(error, res) {
+                    res.stat.should.equal('OK');
+                    res.response.length.should.equal(1);
+                    res.response.shift().username.should.equal(TEST_USER);
+                    done();
+                });
+            });
+
+            it('should delete the new user', function(done) {
+                var path = [
+                    '/admin/v1/users',
+                    TEST_USER_ID
+                ].join('/');
+
+                this.client.request('delete', path, null, function(error, res) {
+                    res.stat.should.equal('OK');
                     done();
                 });
             });
