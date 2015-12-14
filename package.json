@@ -17,9 +17,9 @@
   "author": "Alex Olson <ako@byu.edu> (https://github.com/alexkolson)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BYU-OIT/node-duo-api/issues"
+    "url": "https://github.com/byu-oit-appdev/node-duo-api/issues"
   },
-  "homepage": "https://github.com/BYU-OIT/node-duo-api#readme",
+  "homepage": "https://github.com/byu-oit-appdev/node-duo-api#readme",
   "devDependencies": {
     "chai": "^3.0.0",
     "gulp": "^3.9.0",
